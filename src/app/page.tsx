@@ -7,7 +7,9 @@ import React, { use, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame, ThreeElements, useThree } from '@react-three/fiber'
 import { Color } from "three";
 
+// @ts-ignore
 import vertexShader from "!!raw-loader!./shaders/baseVertexShader.glsl";
+// @ts-ignore
 import fragmentShader from "!!raw-loader!./shaders/baseFragmentShader.glsl";
 
 
@@ -42,6 +44,7 @@ function Box(props: ThreeElements['mesh']) {
 
   useFrame((state) => {
     const { clock } = state;
+    // @ts-ignore
     meshRef.current.material.uniforms.u_time.value = clock.getElapsedTime();
   });
 
