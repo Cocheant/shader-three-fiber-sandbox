@@ -10,7 +10,9 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
+body, html { 
+  font-family: 'Vazir', sans-serif;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
